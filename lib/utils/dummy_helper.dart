@@ -15,10 +15,10 @@ class DummyHelper {
   ];
 
   static List<CategoryModel> categories = [
-    CategoryModel(id: 1, title: 'Fruits', image: Constants.apple),
-    CategoryModel(id: 2, title: 'Vegetables', image: Constants.broccoli),
-    CategoryModel(id: 3, title: 'Cheeses', image: Constants.cheese),
-    CategoryModel(id: 4, title: 'Meat', image: Constants.meat),
+    CategoryModel(id: 1, title: 'Seeds', image: Constants.apple),
+    CategoryModel(id: 2, title: 'Fertilizers', image: Constants.broccoli),
+    CategoryModel(id: 3, title: 'Tools', image: Constants.cheese),
+    CategoryModel(id: 4, title: 'Pesticides', image: Constants.meat),
   ];
 
   static List<ProductModel> products = [
@@ -92,6 +92,42 @@ class DummyHelper {
       name: 'Fresh Spinach',
       quantity: 0,
       price: 2.99,
+      description: _description,
+    ),
+  ];
+
+
+  static List<ProductModel> products_fertilizer = [
+    ProductModel(
+      id: 1,
+      image: Constants.bellPepper,
+      name: 'Bell Pepper Red',
+      quantity: 0,
+      price: 5.99,
+      description: _description,
+    ),
+    ProductModel(
+      id: 2,
+      image: Constants.lambMeat,
+      name: 'Lamb Meat',
+      quantity: 0,
+      price: 44.99,
+      description: _description,
+    ),
+    ProductModel(
+    id: 3,
+      image: Constants.ginger,
+      name: 'Arabic Ginger',
+      quantity: 0,
+      price: 4.99,
+      description: _description,
+    ),
+    ProductModel(
+    id: 4,
+      image: Constants.cabbage,
+      name: 'Fresh Lettuce',
+      quantity: 0,
+      price: 3.99,
       description: _description,
     ),
   ];

@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../config/theme/my_theme.dart';
@@ -6,6 +7,7 @@ import '../../../../utils/dummy_helper.dart';
 import '../../../data/local/my_shared_pref.dart';
 import '../../../data/models/category_model.dart';
 import '../../../data/models/product_model.dart';
+import '../../../routes/app_pages.dart';
 
 class HomeController extends GetxController {
 
@@ -42,5 +44,39 @@ class HomeController extends GetxController {
     isLightTheme = MySharedPref.getThemeIsLight();
     update(['Theme']);
   }
-  
+
+  //search functionality
+  void search(String searchTerm) {
+    switch (searchTerm.toLowerCase()) {
+      case 'fertilizer':
+        Get.toNamed(Routes.PRODUCTS);
+        break;
+      case 'pesticide':
+        Get.toNamed('/pesticide');
+        break;
+      case 'tools':
+        Get.toNamed('/tools');
+        break;
+      case 'seeds':
+        Get.toNamed('/seeds');
+        break;
+      default:
+      // Handle case when no matching category is found
+        Get.dialog(
+          AlertDialog(
+            title: Text('Category Not Found'),
+            content: Text('No category found matching your search term.'),
+            actions: <Widget>[
+              TextButton(
+                onPressed: () {
+                  Get.back();
+                },
+                child: Text('OK'),
+              ),
+            ],
+          ),
+        );
+        break;
+    }
+  }
 }

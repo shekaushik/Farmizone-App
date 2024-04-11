@@ -78,26 +78,28 @@ class HomeView extends GetView<HomeController> {
                     10.verticalSpace,
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 24.w),
-                      child: CustomFormField(
-                        backgroundColor: theme.primaryColorDark,
-                        textSize: 14.sp,
-                        hint: 'Search category',
-                        hintFontSize: 14.sp,
-                        hintColor: theme.hintColor,
-                        maxLines: 1,
-                        borderRound: 60.r,
-                        contentPadding: EdgeInsets.symmetric(
-                          vertical: 10.h,
-                          horizontal: 10.w
+                      child: TextField(
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: theme.primaryColorDark,
+                          hintText: 'Search category',
+                          hintStyle: TextStyle(fontSize: 14.sp, color: theme.hintColor),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(60.r),
+                            borderSide: BorderSide.none,
+                          ),
+                          contentPadding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
+                          prefixIcon: SvgPicture.asset(
+                            Constants.searchIcon,
+                            fit: BoxFit.none,
+                          ),
                         ),
-                        focusedBorderColor: Colors.transparent,
-                        isSearchField: true,
+                        style: TextStyle(fontSize: 14.sp),
                         keyboardType: TextInputType.text,
                         textInputAction: TextInputAction.search,
-                        prefixIcon: SvgPicture.asset(
-                          Constants.searchIcon,
-                          fit: BoxFit.none
-                        ),
+                        onSubmitted: (value) {
+                          controller.search(value); // Call the search method from the
+                        },
                       ),
                     ),
                     20.verticalSpace,
