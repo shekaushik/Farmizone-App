@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 
 import '../../../../utils/constants.dart';
 import '../../../components/category_item.dart';
-import '../../../components/custom_form_field.dart';
 import '../../../components/custom_icon_button.dart';
 import '../../../components/dark_transition.dart';
 import '../../../components/product_item.dart';
@@ -45,7 +44,7 @@ class HomeView extends GetView<HomeController> {
                         ),
                       ),
                       subtitle: Text(
-                        'Amelia Barlow',
+                        'Sheetal',
                         style: theme.textTheme.headline5?.copyWith(
                           fontWeight: FontWeight.normal,
                         ),
@@ -134,13 +133,6 @@ class HomeView extends GetView<HomeController> {
                             'Categories 😋',
                             style: theme.textTheme.headline4,
                           ),
-                          Text(
-                            'See all',
-                            style: theme.textTheme.headline6?.copyWith(
-                              color: theme.primaryColor,
-                              fontWeight: FontWeight.normal,
-                            ),
-                          ),
                         ],
                       ),
                       16.verticalSpace,
@@ -158,13 +150,7 @@ class HomeView extends GetView<HomeController> {
                             'Best selling 🔥',
                             style: theme.textTheme.headline4,
                           ),
-                          Text(
-                            'See all',
-                            style: theme.textTheme.headline6?.copyWith(
-                              color: theme.primaryColor,
-                              fontWeight: FontWeight.normal,
-                            ),
-                          ),
+
                         ],
                       ),
                       16.verticalSpace,

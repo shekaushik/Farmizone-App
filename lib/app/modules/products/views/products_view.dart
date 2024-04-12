@@ -33,7 +33,7 @@ class ProductsView extends GetView<ProductsController> {
                 ),
               ),
               Text(
-                'Vegetables 🌽',
+                'Fertilizers',
                 style: theme.textTheme.headline3,
               ),
               CustomIconButton(
