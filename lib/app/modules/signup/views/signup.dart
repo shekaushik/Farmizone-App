@@ -1,16 +1,17 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter/widgets.dart';
 import '../../../routes/app_pages.dart';
-class SignupPage extends StatelessWidget {
+
+class RegistrationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.lightGreenAccent,
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.green,
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -22,47 +23,46 @@ class SignupPage extends StatelessWidget {
             children: <Widget>[
               Column(
                 children: <Widget>[
-                  FadeInUp(duration: Duration(milliseconds: 1000), child: Text("Sign up", style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold
-                  ),)),
-                  SizedBox(height: 20,),
-                  FadeInUp(duration: Duration(milliseconds: 1200), child: Text("Create an account, It's free", style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.grey[700]
-                  ),)),
+                  FadeInUp(
+                      duration: Duration(milliseconds: 1000),
+                      child: Text("Sign Up",
+                        style: TextStyle(
+                            fontSize: 35,
+                            fontWeight: FontWeight.bold,
+                          fontFamily: 'Poppins',
+                          color: Colors.black,
+                          decoration: TextDecoration.underline
+                        ),
+                      )
+                  ),
                 ],
               ),
               Column(
                 children: <Widget>[
-                  FadeInUp(duration: Duration(milliseconds: 1200), child: makeInput(label: "Email")),
-                  FadeInUp(duration: Duration(milliseconds: 1300), child: makeInput(label: "Password", obscureText: true)),
-                  FadeInUp(duration: Duration(milliseconds: 1400), child: makeInput(label: "Confirm Password", obscureText: true)),
+                  FadeInUp(duration: Duration(milliseconds: 1250), child: makeInput(label: "Email Address")),
+                  FadeInUp(duration: Duration(milliseconds: 1350), child: makeInput(label: "Password", obscureText: true)),
+                  FadeInUp(duration: Duration(milliseconds: 1450), child: makeInput(label: "Confirm Password", obscureText: true)),
                 ],
               ),
               FadeInUp(duration: Duration(milliseconds: 1500), child: Container(
                 padding: EdgeInsets.only(top: 3, left: 3),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    border: Border(
-                      bottom: BorderSide(color: Colors.black),
-                      top: BorderSide(color: Colors.black),
-                      left: BorderSide(color: Colors.black),
-                      right: BorderSide(color: Colors.black),
-                    )
+                    borderRadius: BorderRadius.circular(30),
                 ),
                 child: MaterialButton(
-                  minWidth: double.infinity,
+                  minWidth: 60,
                   height: 60,
+                  padding: EdgeInsets.symmetric(horizontal: 40, vertical: 7),
                   onPressed: () => Get.offNamed(Routes.BASE),
-                  color: Colors.greenAccent,
+                  color: Colors.green[600],
                   elevation: 0,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50)
+                      borderRadius: BorderRadius.circular(30)
                   ),
                   child: Text("Sign up", style: TextStyle(
+                    fontFamily: 'Poppins',
                       fontWeight: FontWeight.w600,
-                      fontSize: 18
+                      fontSize: 22
                   ),),
                 ),
               )),
@@ -101,10 +101,10 @@ class SignupPage extends StatelessWidget {
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
             enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey.shade400)
+                borderSide: BorderSide(color: Colors.black26)
             ),
             border: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey.shade400)
+                borderSide: BorderSide(color: Colors.black26)
             ),
           ),
         ),

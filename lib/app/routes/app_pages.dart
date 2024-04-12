@@ -92,7 +92,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SIGNUP,
-      page: () => SignupPage(),
+      page: () => RegistrationPage(),
       binding: SignupBinding(),
     ),
   ];

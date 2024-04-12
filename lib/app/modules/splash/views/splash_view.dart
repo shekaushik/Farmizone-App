@@ -21,8 +21,8 @@ class SplashView extends GetView<SplashController> {
           backgroundColor: theme.primaryColorDark,
           child: Image.asset(Constants.logo, width: 67.w, height: 55.h),
         ).animate().fade().slideY(
-          duration: 500.ms,
-          begin: 1, curve: Curves.easeInSine
+            duration: 500.ms,
+            begin: 1, curve: Curves.easeInSine
         ),
       ),
     );
