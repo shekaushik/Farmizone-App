@@ -12,42 +12,45 @@ class ProfileView extends GetView<ProfileController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Profile', style: context.theme.textTheme.headline3),
-        centerTitle: true,
-      ),
-      body: Container(color: Colors.white54,
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 15,
+      body: Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/images/signup_bg.png"), // Change to your background image path
+                fit: BoxFit.cover,
+              ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                CircleAvatar(
-                  maxRadius: 65,
-                  backgroundImage: AssetImage("assets/avatar.png"),
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 120,
                 ),
-              ],
-            ),
-            24.verticalSpace,
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-
-                Text(
-                  "ABC XYZ",
-                  style:
-                  TextStyle(fontWeight: FontWeight.w900, fontSize: 26),
-                )
-              ],
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            Container(
-              child: Expanded(
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    CircleAvatar(
+                      maxRadius: 30,
+                      backgroundImage: AssetImage("assets/images/avatar.png"),
+                    ),
+                  ],
+                ),
+                24.verticalSpace,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Text(
+                      "Sheetal",
+                      style:
+                      TextStyle(
+                          fontWeight: FontWeight.w900, fontSize: 26, color: Colors.black),
+                    )
+                  ],
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Expanded(
                   child: ListView(
                     children: [
                       Padding(
@@ -129,11 +132,14 @@ class ProfileView extends GetView<ProfileController> {
                           curve: Curves.easeInSine,
                         ),
                       ),
+                      24.verticalSpace,
                     ],
-                  )),
-            )
-          ],
-        ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
