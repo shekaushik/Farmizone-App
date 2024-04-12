@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../components/no_data.dart';
+import '../../../components/category_item.dart';
 import '../controllers/category_controller.dart';
 
 class CategoryView extends GetView<CategoryController> {
@@ -14,7 +14,18 @@ class CategoryView extends GetView<CategoryController> {
         title: Text('Category', style: context.theme.textTheme.headline3),
         centerTitle: true,
       ),
-      body: const NoData(text: 'This is Category Screen'),
+
+      body: GridView.count(
+        // Create a grid with 2 columns. If you change the scrollDirection to
+        // horizontal, this produces 2 rows.
+        crossAxisCount: 2,
+        // Generate 100 widgets that display their index in the List.
+          children: controller.categories.map((category) {
+            return CategoryItem(category: category);
+          }).toList(),
+      ),
+
     );
   }
 }
+

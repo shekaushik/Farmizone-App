@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 
 import '../../../../utils/constants.dart';
 import '../../../components/category_item.dart';
-import '../../../components/custom_form_field.dart';
 import '../../../components/custom_icon_button.dart';
 import '../../../components/dark_transition.dart';
 import '../../../components/product_item.dart';
