@@ -25,7 +25,7 @@ class Constants {
   static const cheese = 'assets/vectors/cheese.svg';
   static const meat = 'assets/vectors/meat.svg';
 
-  static const background = 'assets/images/background.png';
+  static const background = 'assets/images/bg.png';
   static const backgroundDark = 'assets/images/background_dark.png';
   static const avatar = 'assets/images/avatar.png';
   static const calendar = 'assets/images/calendar.png';

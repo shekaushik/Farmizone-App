@@ -45,7 +45,7 @@ class WelcomeView extends GetView<WelcomeController> {
                 ),
                 30.verticalSpace,
                 Text(
-                  'Get your groceries delivered to your home',
+                  'Get farming products at your doorstep!',
                   style: theme.textTheme.headline1,
                   textAlign: TextAlign.center,
                 ).animate().fade().slideY(
@@ -53,21 +53,43 @@ class WelcomeView extends GetView<WelcomeController> {
                   begin: -1,
                   curve: Curves.easeInSine,
                 ),
-                24.verticalSpace,
-                Text(
-                  'The best delivery app in town for delivering your daily fresh groceries',
-                  style: theme.textTheme.bodyText1,
-                  textAlign: TextAlign.center,
-                ).animate().fade().slideY(
-                  duration: 300.ms,
-                  begin: 1,
-                  curve: Curves.easeInSine,
-                ),
                 40.verticalSpace,
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 70.w),
                   child: CustomButton(
-                    text: 'Shop now',
+                    text: 'Shop Now',
+                    onPressed: () => Get.offNamed(Routes.LOGIN),
+                    fontSize: 16.sp,
+                    radius: 50.r,
+                    verticalPadding: 16.h,
+                    hasShadow: false,
+                  ).animate().fade().slideY(
+                    duration: 300.ms,
+                    begin: 1,
+                    curve: Curves.easeInSine,
+                  ),
+                ),
+                24.verticalSpace,
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 70.w),
+                  child: CustomButton(
+                    text: 'Manage Store',
+                    onPressed: () => Get.offNamed(Routes.LOGIN),
+                    fontSize: 16.sp,
+                    radius: 50.r,
+                    verticalPadding: 16.h,
+                    hasShadow: false,
+                  ).animate().fade().slideY(
+                    duration: 300.ms,
+                    begin: 1,
+                    curve: Curves.easeInSine,
+                  ),
+                ),
+                24.verticalSpace,
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 70.w),
+                  child: CustomButton(
+                    text: 'Admin',
                     onPressed: () => Get.offNamed(Routes.LOGIN),
                     fontSize: 16.sp,
                     radius: 50.r,
