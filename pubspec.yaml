@@ -46,6 +46,8 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_screenutil: ^5.9.0
   animate_do: ^3.3.4
+  firebase_core: ^2.29.0
+  firebase_auth: ^4.19.1
 
 dev_dependencies:
   flutter_test:

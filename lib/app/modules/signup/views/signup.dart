@@ -10,14 +10,13 @@ class RegistrationPage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
-        toolbarHeight: 20,
         backgroundColor: Colors.green,
       ),
       body: SingleChildScrollView(
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/images/signup_bg.png"), // Change the path to your image asset
+              image: AssetImage("assets/background_image.jpg"), // Change the path to your image asset
               fit: BoxFit.cover,
             ),
           ),
@@ -47,15 +46,13 @@ class RegistrationPage extends StatelessWidget {
                 ),
                 Column(
                   children: <Widget>[
-                    FadeInUp(duration: Duration(milliseconds: 1250), child: makeInput(label: "Username")),
-                    FadeInUp(duration: Duration(milliseconds: 1350), child: makeInput(label: "Email Address")),
-                    FadeInUp(duration: Duration(milliseconds: 1450), child: makeInput(label: "Password", obscureText: true)),
-                    FadeInUp(duration: Duration(milliseconds: 1550), child: makeInput(label: "Confirm Password", obscureText: true)),
+                    FadeInUp(duration: Duration(milliseconds: 1250), child: makeInput(label: "Email Address")),
+                    FadeInUp(duration: Duration(milliseconds: 1350), child: makeInput(label: "Password", obscureText: true)),
+                    FadeInUp(duration: Duration(milliseconds: 1450), child: makeInput(label: "Confirm Password", obscureText: true)),
                   ],
                 ),
-                FadeInUp(duration: Duration(milliseconds: 1600), child: Container(
-                  padding: EdgeInsets.only(top: 4, left: 3),
-                  margin: EdgeInsets.symmetric(vertical: 5),
+                FadeInUp(duration: Duration(milliseconds: 1500), child: Container(
+                  padding: EdgeInsets.only(top: 3, left: 3),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                   ),
@@ -88,11 +85,7 @@ class RegistrationPage extends StatelessWidget {
                         textStyle: const TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
                       ),
                       onPressed: () => Get.offNamed(Routes.LOGIN),
-                      child: const Text('Log In',
-                          style: TextStyle(
-                          color: Colors.grey
-                      ),
-                      ),
+                      child: const Text('Log In'),
                     ),
                   ],
                 )),
