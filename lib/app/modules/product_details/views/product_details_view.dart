@@ -99,7 +99,7 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.w),
               child: Text(
-                '1kg, ${controller.product.price}\$',
+                '1kg, ₹${controller.product.price}',
                 style: theme.textTheme.headline3?.copyWith(),
               ).animate().fade().slideX(
                 duration: 300.ms,
@@ -110,8 +110,7 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
             8.verticalSpace,
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.w),
-              child: Text(
-                controller.product.description,
+              child: Text("Amino Acid Powder is 80% Powder fine free flowing spray dried Powder. It is prepared by controlled enzymatic hydrolysis of plant origin material. Amino Acid 80% Powder contains twenty amino acids.",
                 style: theme.textTheme.bodyText1,
               ).animate().fade().slideX(
                 duration: 300.ms,
@@ -120,28 +119,6 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
               ),
             ),
             20.verticalSpace,
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24.w),
-              child: GridView(
-                shrinkWrap: true,
-                primary: false,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 16.w,
-                  mainAxisSpacing: 16.h,
-                  mainAxisExtent: 80.h,
-                ),
-                children: DummyHelper.cards.map((card) => CustomCard(
-                  title: card['title']!,
-                  subtitle: card['subtitle']!,
-                  icon: card['icon']!,
-                )).toList().animate().fade().slideY(
-                  duration: 300.ms,
-                  begin: 1,
-                  curve: Curves.easeInSine,
-                ),
-              ),
-            ),
             30.verticalSpace,
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.w),
@@ -158,7 +135,22 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
                 curve: Curves.easeInSine,
               ),
             ),
-            30.verticalSpace,
+            10.verticalSpace,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24.w),
+              child: CustomButton(
+                text: 'Wishlist',
+                onPressed: () => controller.onAddToCartPressed(),
+                fontSize: 16.sp,
+                radius: 50.r,
+                verticalPadding: 16.h,
+                hasShadow: false,
+              ).animate().fade().slideY(
+                duration: 300.ms,
+                begin: 1,
+                curve: Curves.easeInSine,
+              ),
+            ),
           ],
         ),
       ),

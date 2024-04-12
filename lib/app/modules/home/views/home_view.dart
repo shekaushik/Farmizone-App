@@ -44,7 +44,7 @@ class HomeView extends GetView<HomeController> {
                         ),
                       ),
                       subtitle: Text(
-                        'Amelia Barlow',
+                        'Sheetal',
                         style: theme.textTheme.headline5?.copyWith(
                           fontWeight: FontWeight.normal,
                         ),
@@ -133,13 +133,6 @@ class HomeView extends GetView<HomeController> {
                             'Categories 😋',
                             style: theme.textTheme.headline4,
                           ),
-                          Text(
-                            'See all',
-                            style: theme.textTheme.headline6?.copyWith(
-                              color: theme.primaryColor,
-                              fontWeight: FontWeight.normal,
-                            ),
-                          ),
                         ],
                       ),
                       16.verticalSpace,
@@ -157,13 +150,7 @@ class HomeView extends GetView<HomeController> {
                             'Best selling 🔥',
                             style: theme.textTheme.headline4,
                           ),
-                          Text(
-                            'See all',
-                            style: theme.textTheme.headline6?.copyWith(
-                              color: theme.primaryColor,
-                              fontWeight: FontWeight.normal,
-                            ),
-                          ),
+
                         ],
                       ),
                       16.verticalSpace,
